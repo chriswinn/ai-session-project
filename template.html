@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Claude Session Handoff Template</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 900px; margin: 2em auto; padding: 0 1.25em 4em; line-height: 1.65; color: #222; }
+  h1 { font-size: 1.65em; border-bottom: 3px solid #2a3a5a; padding-bottom: 0.3em; margin-bottom: 0.2em; color: #2a3a5a; }
+  h2 { font-size: 1.15em; margin-top: 2em; border-bottom: 1px solid #bbb; padding-bottom: 0.2em; }
+  h3 { font-size: 0.97em; margin-top: 1.4em; font-weight: 600; }
+  .meta { color: #666; font-size: 0.88em; margin-bottom: 1.5em; font-family: monospace; }
+  .status   { background: #eaf6ec; border-left: 3px solid #2a7a3c; padding: 0.8em 1em; margin: 1em 0; }
+  .priority { background: #fff8e6; border: 2px solid #c8860a; padding: 1em 1.2em; margin: 1.25em 0; border-radius: 4px; }
+  .priority h2 { color: #7a4e00; border-color: #c8860a; margin-top: 0; }
+  .resume   { background: #eef4f8; border-left: 3px solid #3a6080; padding: 0.8em 1em; margin: 1em 0; }
+  .watch    { background: #fdecea; border-left: 3px solid #b03030; padding: 0.8em 1em; margin: 1em 0; }
+  .info     { background: #fef9ec; border-left: 3px solid #b8860b; padding: 0.8em 1em; margin: 1em 0; }
+  .operating { background: #eef0f8; border-left: 4px solid #3a4a8a; padding: 1em 1.2em; margin: 1em 0; }
+  .placeholder { background: #fffbe6; border: 1px dashed #c8a020; border-radius: 3px; padding: 0.4em 0.7em; font-style: italic; color: #7a5800; font-size: 0.87em; margin: 0.3em 0; }
+  .placeholder::before { content: "▶ "; font-style: normal; }
+  .usage { background: #2a3a5a; color: #c0ccdc; border-radius: 4px; padding: 1.1em 1.4em; margin: 1.2em 0 2em; font-size: 0.87em; line-height: 1.7; }
+  .usage h2 { color: #90b0e0; border-color: #3a4a6a; font-size: 0.95em; margin-top: 0; }
+  .usage li { color: #b0bcd0; margin-bottom: 0.45em; }
+  .usage code { background: #1e2d4a; color: #90b8e0; padding: 1px 4px; border-radius: 2px; }
+  .tip { background: #f0f4f0; border-left: 3px solid #5a8a5a; padding: 0.6em 0.9em; margin: 0.6em 0; font-size: 0.87em; color: #3a5a3a; }
+  .tip::before { content: "💡 "; }
+  code { background: #ede9e2; padding: 1px 4px; border-radius: 3px; font-size: 0.87em; font-family: monospace; }
+  pre { background: #f3f3f3; padding: 0.8em 1em; border-radius: 4px; overflow-x: auto; font-size: 0.83em; line-height: 1.45; font-family: monospace; }
+  ul, ol { padding-left: 1.4em; }
+  li { margin-bottom: 0.35em; }
+  table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 0.87em; }
+  th, td { border: 1px solid #ccc; padding: 5px 9px; text-align: left; vertical-align: top; }
+  th { background: #eee; font-size: 0.88em; }
+  .done    { color: #1a6a2a; font-weight: 600; }
+  .pending { color: #a2260b; font-weight: 600; }
+  .hold    { color: #cc7700; font-weight: 600; }
+  .version { font-family: monospace; color: #888; }
+</style>
+</head>
+<body>
+
+<h1>Claude Session Handoff — [Project Name]</h1>
+<p class="meta">Date: <strong>[YYYY-MM-DD]</strong> &nbsp;·&nbsp; Session: <strong class="version">[#]</strong> &nbsp;·&nbsp; <em>[One-line summary of what happened this session]</em></p>
+
+<!-- ═══════════════════════════════════════════
+     USAGE GUIDE — read once, then delete
+     ═══════════════════════════════════════════ -->
+<div class="usage">
+  <h2>What this file is and how to use it</h2>
+  <p>Claude has no memory between conversations. This handoff file gives the next Claude instance everything it needs to pick up exactly where you left off — without you having to re-explain your project from scratch.</p>
+  <p><strong>To use:</strong></p>
+  <ol>
+    <li>Fill every <code>▶ placeholder</code> with your project's content. Delete placeholders as you go.</li>
+    <li>Delete this usage guide block once you've read it.</li>
+    <li>Fill in the <strong>Operating Core (§6)</strong> with your project's specific rules, methodology, constraints, or decision framework. This is what makes the handoff powerful — Claude will apply your rules without you re-stating them.</li>
+    <li>At the start of your next session, upload this file and tell Claude: <em>"Please read this handoff and resume from where we left off."</em></li>
+    <li>Save a new version at the end of each session. Suggested filename: <code>project-name-handoff-YYYY-MM-DD.html</code></li>
+  </ol>
+  <p><strong>Works from anywhere:</strong> Upload from your computer, Google Drive, iCloud, Dropbox, or any cloud storage. No special tools required.</p>
+</div>
+
+<!-- ═══════════════════
+     §1  SESSION STATUS
+     ═══════════════════ -->
+<div class="status">
+  <strong>STATUS — what happened this session:</strong>
+  <div class="placeholder">Summarise the session in 3–6 sentences. What was the goal? What got done? What changed? What was explicitly deferred? What decisions were made? What decisions are still open?</div>
+</div>
+
+<!-- ═══════════════════
+     §2  TOP PRIORITY
+     ═══════════════════ -->
+<div class="priority">
+  <h2>TOP PRIORITY FOR NEXT SESSION</h2>
+  <p><strong>Goal:</strong> <em class="placeholder" style="display:inline">State the single most important outcome for next session in one sentence.</em></p>
+
+  <h3>Suggested workflow</h3>
+  <ol>
+    <li><div class="placeholder">Step 1 — what to load, upload, or provide to Claude at session start</div></li>
+    <li><div class="placeholder">Step 2 — first concrete task</div></li>
+    <li><div class="placeholder">Continue as needed...</div></li>
+  </ol>
+
+  <div class="tip">Be specific. "Continue working on X" is less useful than "Pick up at step 3 of the Y workflow — we left off because Z."</div>
+</div>
+
+<!-- ═══════════════════
+     §3  CURRENT STATE
+     ═══════════════════ -->
+<h2>§3 — Current project state</h2>
+
+<div class="placeholder">Describe where things actually stand right now — not where they started, not where they're headed, but the current state. Think of this as what someone would need to know if they were taking over this project cold today. Include: what exists, what's been decided, what's been ruled out, and what's in progress.</div>
+
+<div class="tip">This section replaces having to re-explain your project at the start of every session. Be concrete. "We decided to use approach X because Y" is more useful than "we discussed approaches."</div>
+
+<h3>Key decisions made (and why)</h3>
+<ul>
+  <li><div class="placeholder">Decision: [what was decided]. Rationale: [why]. Alternatives ruled out: [what and why].</div></li>
+  <li><div class="placeholder">Add more as needed.</div></li>
+</ul>
+
+<h3>Open questions</h3>
+<ul>
+  <li><div class="placeholder">Question still to be resolved. Context: [what's known so far].</div></li>
+</ul>
+
+<!-- ═══════════════════
+     §4  FILE INVENTORY
+     ═══════════════════ -->
+<h2>§4 — File inventory</h2>
+
+<div class="tip">List every file that matters to this project. Claude can't see your file system — this list is how it knows what exists and where.</div>
+
+<table>
+  <thead><tr><th>File / document</th><th>Format</th><th>Where it lives</th><th>Status / notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><div class="placeholder">Filename or description</div></td>
+      <td><div class="placeholder">.md / .html / .pdf / etc.</div></td>
+      <td><div class="placeholder">Google Drive / GitHub / iCloud / local</div></td>
+      <td><div class="placeholder">Current draft / needs update / superseded</div></td>
+    </tr>
+    <tr>
+      <td><div class="placeholder">Add more rows as needed</div></td>
+      <td></td><td></td><td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════
+     §5  WATCH ITEMS
+     ═══════════════════ -->
+<h2>§5 — Watch items &amp; constraints</h2>
+<div class="watch">
+  <div class="tip" style="border-color:#c06060;background:#fdf0ee;color:#6a2a2a;">Hard constraints go here — things Claude must never do or always do in the context of this project. Also include gotchas, dependencies, and anything that's bitten you before.</div>
+  <ul>
+    <li><div class="placeholder">Hard constraint or watch item. Why it matters.</div></li>
+    <li><div class="placeholder">Dependency — e.g. "File X must be updated before File Y."</div></li>
+    <li><div class="placeholder">Known risk — e.g. "Approach Z was tried and failed because..."</div></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════
+     §6  PROJECT OPERATING CORE
+     Fill this with your project's rules,
+     methodology, and decision framework.
+     This is what makes the handoff powerful.
+     ═══════════════════════════════════════ -->
+<h2>§6 — Project operating core</h2>
+<div class="operating">
+
+  <div class="tip" style="border-color:#4a4a8a;background:#eceef8;color:#2a2a6a;">This section is the most important one to fill out well. It tells Claude <em>how to think</em> about your project — your methodology, your standards, your constraints, your vocabulary. A Claude instance reading this should be able to make decisions consistent with your approach without asking you to re-explain everything.</div>
+
+  <h3>Project description</h3>
+  <div class="placeholder">What is this project, in 2–4 sentences? What is it trying to accomplish? Who is it for?</div>
+
+  <h3>Methodology / approach</h3>
+  <div class="placeholder">How do you work on this project? What process do you follow? What frameworks, standards, or principles guide decisions? Examples: "We use test-driven development." / "Every architectural decision must pass a two-path test." / "Chapters are drafted before guidance docs, never after." / "We defer aesthetic decisions until structure is settled."</div>
+
+  <h3>Key terminology</h3>
+  <ul>
+    <li><strong><div class="placeholder" style="display:inline">Term</div>:</strong> <div class="placeholder" style="display:inline">Definition as used in this project. Note if it differs from standard usage.</div></li>
+    <li><strong><div class="placeholder" style="display:inline">Term</div>:</strong> <div class="placeholder" style="display:inline">Definition.</div></li>
+  </ul>
+
+  <h3>Decision rules</h3>
+  <div class="placeholder">If-then rules Claude should apply when making decisions. Examples: "If two approaches are equally valid, prefer the one that requires fewer files." / "If a claim can't pass the rigor test, it doesn't go in the document — capture it as a watch item instead." / "Always check X before changing Y."</div>
+
+  <h3>Quality bar / standards</h3>
+  <div class="placeholder">What does "good enough" look like for this project? What would make you send something back for revision? Examples: "Code must include error handling and comments." / "Every chapter must have at least one concrete real-world example." / "No claim goes in without a citation."</div>
+
+  <h3>Hard rules</h3>
+  <ul>
+    <li><div class="placeholder">Something Claude must always do in this project context.</div></li>
+    <li><div class="placeholder">Something Claude must never do.</div></li>
+  </ul>
+
+  <h3>Naming / file conventions</h3>
+  <pre><div class="placeholder" style="background:transparent;border:none;color:inherit;font-style:italic;padding:0;">Document your naming patterns here.
+Example:
+  Drafts:    project-name-draft-YYYY-MM-DD.md
+  Handoffs:  project-name-handoff-YYYY-MM-DD.html
+  Notes:     project-name-notes-topic.md</div></pre>
+
+</div>
+
+<!-- ════════════════════════
+     §7  RESUME INSTRUCTIONS
+     ════════════════════════ -->
+<h2>§7 — Resume instructions for Claude</h2>
+<div class="resume">
+  <p><strong>To the Claude instance reading this file:</strong></p>
+  <ol>
+    <li>Read this entire handoff before responding to the user.</li>
+    <li>Treat §6 (Operating Core) as standing instructions — apply the methodology, decision rules, and standards to all work in this session.</li>
+    <li>The top priority is in §2. Start there unless the user redirects you.</li>
+    <li>If you're uncertain whether an action is consistent with the project's approach, check §6 before proceeding and ask if still unsure.</li>
+    <li>At the end of this session, help the user update this handoff file with the new session's status, decisions, and next priority — so the next Claude instance can pick up seamlessly.</li>
+    <li><div class="placeholder">Any session-specific resume instruction — e.g. "We were mid-way through reviewing section 4. Resume there."</div></li>
+  </ol>
+</div>
+
+<!-- ════════════════════════
+     §8  METHODOLOGY NOTES
+     ════════════════════════ -->
+<h2>§8 — Notes from this session</h2>
+<div class="info">
+  <ul>
+    <li><div class="placeholder">New rules, refinements, or precedents established this session that should inform future sessions. Also useful for capturing "we tried X and it didn't work because Y."</div></li>
+  </ul>
+</div>
+
+<p class="meta" style="margin-top:3em; border-top:1px solid #ccc; padding-top:1em;">
+  End of handoff — Session <span class="version">[#]</span>, [YYYY-MM-DD]. &nbsp;
+  <strong>Next session priority: <em>[restate in one line]</em></strong>
+</p>
+
+<!-- ════════════════════════════════════════════
+     ABOUT THIS TEMPLATE
+     Keep this block — it explains the template
+     to others who might use it.
+     ════════════════════════════════════════════ -->
+<hr style="margin-top:4em;border-color:#ddd;">
+<p style="font-size:0.8em;color:#888;margin-top:1em;">
+  <strong>Claude Session Handoff Template</strong> — an open-source tool for maintaining continuity across Claude sessions.
+  Claude has no memory between conversations; this file solves that by giving each new Claude instance a structured briefing.
+  Upload to any Claude session and say: <em>"Please read this handoff and resume from where we left off."</em>
+  Works from Google Drive, iCloud, Dropbox, or any local storage.
+  Template source: <a href="https://github.com/[your-username]/claude-session-handoff" style="color:#3a6080;">github.com/[your-username]/claude-session-handoff</a>
+</p>
+
+</body>
+</html>

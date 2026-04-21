@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Claude Session Handoff — Liveaboard Sailboat Project (Example)</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 900px; margin: 2em auto; padding: 0 1.25em 4em; line-height: 1.65; color: #222; }
+  h1 { font-size: 1.65em; border-bottom: 3px solid #2a3a5a; padding-bottom: 0.3em; margin-bottom: 0.2em; color: #2a3a5a; }
+  h2 { font-size: 1.15em; margin-top: 2em; border-bottom: 1px solid #bbb; padding-bottom: 0.2em; }
+  h3 { font-size: 0.97em; margin-top: 1.4em; font-weight: 600; }
+  h4 { font-size: 0.92em; margin-top: 1.1em; margin-bottom: 0.3em; font-weight: 600; color: #3a4a6a; }
+  .meta { color: #666; font-size: 0.88em; margin-bottom: 1.5em; font-family: monospace; }
+  .example-banner { background: #e8f4e8; border: 2px solid #4a8a4a; border-radius: 4px; padding: 0.8em 1.1em; margin-bottom: 1.5em; font-size: 0.9em; color: #2a5a2a; }
+  .status   { background: #eaf6ec; border-left: 3px solid #2a7a3c; padding: 0.8em 1em; margin: 1em 0; }
+  .priority { background: #fff8e6; border: 2px solid #c8860a; padding: 1em 1.2em; margin: 1.25em 0; border-radius: 4px; }
+  .priority h2 { color: #7a4e00; border-color: #c8860a; margin-top: 0; }
+  .resume   { background: #eef4f8; border-left: 3px solid #3a6080; padding: 0.8em 1em; margin: 1em 0; }
+  .watch    { background: #fdecea; border-left: 3px solid #b03030; padding: 0.8em 1em; margin: 1em 0; }
+  .info     { background: #fef9ec; border-left: 3px solid #b8860b; padding: 0.8em 1em; margin: 1em 0; }
+  .operating { background: #eef0f8; border-left: 4px solid #3a4a8a; padding: 1em 1.2em; margin: 1em 0; }
+  .tier      { background: #f6f4ee; border-left: 3px solid #8a7030; padding: 0.8em 1em; margin: 0.8em 0; }
+  .tier h4 { margin-top: 0; color: #6a5020; }
+  code { background: #ede9e2; padding: 1px 4px; border-radius: 3px; font-size: 0.87em; font-family: monospace; }
+  pre { background: #f3f3f3; padding: 0.8em 1em; border-radius: 4px; overflow-x: auto; font-size: 0.83em; line-height: 1.45; font-family: monospace; }
+  ul, ol { padding-left: 1.4em; }
+  li { margin-bottom: 0.35em; }
+  table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 0.87em; }
+  th, td { border: 1px solid #ccc; padding: 5px 9px; text-align: left; vertical-align: top; }
+  th { background: #eee; font-size: 0.88em; }
+  .done    { color: #1a6a2a; font-weight: 600; }
+  .pending { color: #a2260b; font-weight: 600; }
+  .hold    { color: #cc7700; font-weight: 600; }
+  .tbd     { color: #888; font-style: italic; font-family: monospace; }
+  .version { font-family: monospace; color: #888; }
+</style>
+</head>
+<body>
+
+<div class="example-banner">
+  <strong>This is an example file</strong> — it shows the template filled out for a real project type (liveaboard sailboat transition). Use it as a reference when filling out your own handoff. See <code>template.html</code> for the blank version.
+</div>
+
+<h1>Claude Session Handoff — Liveaboard Sailboat Project</h1>
+<p class="meta">Date: <strong>2026-04-21</strong> &nbsp;·&nbsp; Session: <strong class="version">7</strong> &nbsp;·&nbsp; <em>Researched Prout Snowgoose 37 in depth; clarified insurance qualification path; Tartan 33 evaluated and passed on.</em></p>
+
+<div class="status">
+  <strong>STATUS:</strong> Session focused on evaluating the Prout Snowgoose 37/Elite as a catamaran liveaboard candidate and clarifying the insurance qualification pathway. The specific Tartan 33 under evaluation was passed on — motor wouldn't stay running, rigging and sails needed full replacement, and the all-in cost to get it safely to the slip would have exceeded what a better-condition boat at similar total outlay would cost. The make and model remain viable in principle at the right all-in number; this was a single-boat decision, not a category dismissal. Prout Snowgoose 37 remains under active evaluation: good headroom for smaller sailors, twin keels allow drying out, shoal draft useful for Chesapeake Bay cruising, older build quality is the main open question. Two ongoing research tracks were formalised this session (see §3): whether the Prout is a for-now boat or a forever boat, and when all-electric propulsion plus renewable generation becomes mature enough to commit to on a forever boat. The long-term tier was expanded to include Fountaine Pajot, larger Lagoons, Bali, and Nautitech alongside the Leopard 44. Insurance minimum requirements were researched: 50-ton OUPV or ASA 104 typically required for offshore liveaboard coverage; bareboat charter experience is a plus. BoatUS Safe Boating Certificate is in progress and counts as a baseline credential. Financing question still open — liveaboard loans have different requirements than standard marine financing, and the 20-year hull-age ceiling on most marine loans is a hard constraint shaping the boat tier structure.
+</div>
+
+<div class="priority">
+  <h2>TOP PRIORITY FOR NEXT SESSION</h2>
+  <p><strong>Goal:</strong> Map the complete qualification pathway from current state to insurable offshore liveaboard, with estimated timeline and costs.</p>
+  <h3>Suggested workflow</h3>
+  <ol>
+    <li>Review current credential state (BoatUS cert in progress, no offshore miles logged yet).</li>
+    <li>Research ASA course sequence: ASA 101 → 103 → 104 → 114 for catamaran endorsement. Get realistic cost and time estimates.</li>
+    <li>Research OUPV 50-ton licensing path as alternative to ASA for insurance purposes.</li>
+    <li>Identify which liveaboard-friendly insurers (Markel, Concept Special Risks, West Marine/Markel) will cover a catamaran under 40ft with the qualification path we map out.</li>
+    <li>Produce a one-page qualification roadmap with timeline and cost estimate.</li>
+  </ol>
+</div>
+
+<h2>§3 — Current project state</h2>
+<p>Working toward transitioning from shoreside living to a full-time liveaboard on a bluewater-capable sailboat. A liveaboard slip has been secured at the local marina. Boats are being evaluated against a tiered financial plan (see below) rather than a single target number — the right boat depends on which tier the funding lands in.</p>
+
+<h3>Financial goals &amp; boat tiers</h3>
+<p>Budget targets below are <span class="tbd">TBD</span> — to be filled in as the savings plan firms up. Each tier has a realistic boat shortlist associated with it, drawn from prior research sessions. A tier's shortlist is what's <em>actually findable in decent condition</em> at that all-in outlay (purchase + survey contingency + delivery + immediate must-fix items), not what the sticker price suggests.</p>
+
+<div class="tier">
+  <h4>Near-term tier — all-in budget: <span class="tbd">TBD</span></h4>
+  <p><em>Cash purchase. Older hulls (pre-2006, not loan-eligible). Expect deferred maintenance; budget 10–20% contingency on top of purchase price.</em></p>
+  <p><strong>Attainable shortlist:</strong></p>
+  <ul>
+    <li><strong>Cape Dory 30 / 36</strong> — full-keel Alberg designs, famously sea-kindly, well under mid-budget range for cosmetically tired examples.</li>
+    <li><strong>Westsail 32</strong> — legendary offshore comfort, double-ender, project-grade examples exist at the low end.</li>
+    <li><strong>Pearson 36 / 365</strong> — good value, Pearson 365 is a ketch with decent liveaboard volume.</li>
+    <li><strong>Endeavour 37</strong> — slow, heavy, built to last. Interior usually needs updating.</li>
+    <li><strong>Bayfield 32</strong> — cutter option, gentle motion, solid build.</li>
+    <li><strong>Formosa 41 (project grade)</strong> — heavy Taiwanese build, multiple enclosed cabins, will need refit time and cash.</li>
+    <li><strong>Tartan 33 (at the right all-in number)</strong> — viable if the total cost to get it safely sailing comes in near this tier's ceiling. The issue with the last one evaluated was that motor replacement plus rigging and sails pushed the all-in well past what a better-condition boat at this tier would cost. A Tartan 33 that delivers for under this tier's ceiling is still on the table.</li>
+  </ul>
+</div>
+
+<div class="tier">
+  <h4>Mid-term tier — all-in budget: <span class="tbd">TBD</span></h4>
+  <p><em>Quality used cash purchase, or early financing on newer hulls (2006+). This is the tier where catamarans first become realistic.</em></p>
+  <p><strong>Attainable shortlist:</strong></p>
+  <ul>
+    <li><strong>Gemini 105MC</strong> — coastal-focused catamaran, 14ft beam fits standard slips, 18-inch draft with boards up. The shallow draft opens up the entire Chesapeake Bay — almost any gunkhole, creek, and thin-water anchorage becomes available. Good fit for the near/mid-term period before going offshore.</li>
+    <li><strong>PDQ 32</strong> — well-built small cat, good quality for the size.</li>
+    <li><strong>Prout Snowgoose 37 / Elite</strong> — currently under active evaluation. Narrow beam means standard slip fees, twin keels, bluewater credentials at a working-person price. Salon headroom is the main liveaboard compromise.</li>
+    <li><strong>Tayana 37 (center cockpit / aft cabin version)</strong> — true bluewater monohull, separate aft cabin. Realistic entry point for the shortlist of "forever boats."</li>
+    <li><strong>Cape George 36</strong> — heavy, beautiful, full keel. Fewer enclosed-cabin options but excellent build.</li>
+    <li><strong>Early Lagoon 380 (2006–2009, ex-charter)</strong> — most affordable bluewater cat on the market in this tier, but ~22ft beam means double slip fees most places. Marina slip width must be verified first.</li>
+    <li><strong>Beneteau Oceanis 40/43, Jeanneau Sun Odyssey 40–44</strong> — newer cruiser-oriented monohulls, more interior volume than the heavy-displacement classics but less ultimate offshore credentials.</li>
+  </ul>
+</div>
+
+<div class="tier">
+  <h4>Long-term tier — all-in budget: <span class="tbd">TBD</span></h4>
+  <p><em>Financing-eligible on newer hulls, or substantial cash outlay on a premium classic. Later-career acquisition. Target is a boat to hold and cruise long-term.</em></p>
+  <p><strong>Attainable shortlist:</strong></p>
+  <ul>
+    <li><strong>Cabo Rico 38 (center cockpit)</strong> — top of the heavy-displacement offshore monohull list. Full private aft cabin. Patience required to find at a fair number.</li>
+    <li><strong>Tashiba 36</strong> — Ta Shing build quality, GGR-approved pedigree. Watch for black iron fuel tank corrosion.</li>
+    <li><strong>Pacific Seacraft 40 / 37</strong> — excellent build, well-supported. Check deck core and electrical on older examples.</li>
+    <li><strong>Hans Christian 38T</strong> — heavy, teak-rich, center cockpit layouts available. High maintenance load.</li>
+    <li><strong>Formosa 41 (turn-key)</strong> — the refit version of the near-term entry on this same model.</li>
+    <li><strong>Valiant 40</strong> — post-1984 only (pre-1984 had osmotic blistering issues).</li>
+    <li><strong>Leopard 44 (2011–2015)</strong> — Morrelli &amp; Melvin design, Boat of the Year on introduction. Primary long-term catamaran target from prior research.</li>
+    <li><strong>Fountaine Pajot (Helia 44, Lucia 40, Saba 50, Elba 45, Astréa 42)</strong> — French production bluewater cats with strong offshore reputation. Several newer models offer factory electric-propulsion options; factor into the ongoing electric-systems evaluation (see research tracks).</li>
+    <li><strong>Lagoon (42, 450, 46)</strong> — the larger Lagoons that move beyond the wide-beam slip-fee problem of the 380. Market-leading production volume means parts and service are the best-supported in the category.</li>
+    <li><strong>Bali (4.0, 4.1, 4.2, 4.6)</strong> — newer generation cats with open-salon layouts and solid hardtops well-suited to large solar arrays. Good candidate platforms for renewable-heavy electrical systems.</li>
+    <li><strong>Nautitech (40 Open, 46 Open)</strong> — performance-oriented cruising cats, tiller-steered options, lighter displacement than Lagoon/FP at similar length.</li>
+    <li><strong>Jeanneau 44.9 / 54, Beneteau Oceanis 45–48</strong> — newer monohull alternatives if catamaran economics don't pencil out.</li>
+  </ul>
+</div>
+
+<h3>Ongoing research tracks</h3>
+<p>These are open investigations that don't tie to a single purchase decision — they're re-evaluated across sessions as new information surfaces. Each should be updated in future handoffs, not closed out.</p>
+
+<div class="tier" style="border-left-color:#3a6a8a;background:#eef2f6;">
+  <h4 style="color:#2a4a6a;">Track 1 — Prout Snowgoose 37: for-now boat, or forever boat?</h4>
+  <p><em>Open question: does the Prout Snowgoose earn a place in the long-term tier, or is it strictly a mid-term stepping stone?</em></p>
+  <p><strong>Factors for forever status:</strong> proven offshore record across decades of circumnavigations, narrow beam (standard slip fees indefinitely), twin keels for drying out without a cradle, strong value retention, three-cabin layout, bluewater credentials at a working-person price point that doesn't exist anywhere else in the catamaran market.</p>
+  <p><strong>Factors against:</strong> salon headroom is a permanent ergonomic compromise, not just a tolerable one; Prout went bust in 2002 so there is no factory support, parts sourcing is owner-community only; every example is now old enough that structural issues (decks, chainplates) are a real risk regardless of survey; limited upgrade path for modern electrical and propulsion systems compared to newer cat platforms.</p>
+  <p><strong>Next step:</strong> find Prout owners who've completed extended offshore passages in the past 5 years, assess long-term maintainability trajectory vs. newer cat platforms at similar all-in cost. Re-evaluate annually.</p>
+</div>
+
+<div class="tier" style="border-left-color:#2a7a5a;background:#eef6f1;">
+  <h4 style="color:#1a5a3a;">Track 2 — Electric propulsion &amp; renewable power systems: forever-boat readiness</h4>
+  <p><em>Open question: when are all-electric catamaran propulsion systems plus battery + solar + wind generation mature and reliable enough to commit to on a forever boat?</em></p>
+  <p><strong>Current read:</strong> solar + wind + LiFePO4 house systems are mature now — Victron-class charge controllers, 600–1,200W solar, 100–200Ah LiFePO4 banks, and 400–600W wind generators are reliable and well-documented for offshore use. Hydrogenerators (Watt &amp; Sea and equivalents) add a third dimension on passage. Full electric propulsion is a different question: diesel hybrid remains the offshore standard at accessible price points, and full-electric platforms (Oceanvolt, Torqeedo Deep Blue, Bellmarine, serial-hybrid drop-ins) are still maturing on range, charge times, and serviceability in remote ports.</p>
+  <p><strong>Readiness criteria — all must be met before committing to a full-electric forever boat:</strong></p>
+  <ul>
+    <li>Documented offshore passages of 500+ nm under electric-only propulsion becoming routine in the cruising community, not just demonstration events.</li>
+    <li>Service network for the propulsion system exists in at least two of the major cruising hubs (Caribbean, Mediterranean, Pacific).</li>
+    <li>Replacement battery cost at 10-year mark is known and financeable — not a surprise capital event.</li>
+    <li>At least two production catamaran builders (e.g. Fountaine Pajot, Lagoon, Bali, Leopard) offering electric as a factory option with multi-year fleet data.</li>
+    <li>Solar + wind + hydro generation budget, under realistic cruising conditions, covers both house and propulsion charging with a comfortable margin — not just theoretical sizing.</li>
+  </ul>
+  <p><strong>Reassessment cadence:</strong> annually, or on material announcements from the major electric-propulsion vendors or production cat builders.</p>
+  <p><strong>Implications for tier decisions:</strong> until readiness criteria are met, the long-term tier defaults to diesel or diesel-hybrid platforms with strong renewable house systems. Long-term candidates should be preferred if they have an existing electric-conversion or factory-electric pathway, so the platform can evolve as the technology matures rather than forcing a re-purchase.</p>
+</div>
+
+<h3>Key decisions made</h3>
+<ul>
+  <li><strong>Tiered financial plan, not a single target.</strong> The right boat depends on which tier the savings land in, and each tier has its own realistic shortlist. The mid and long-term tiers are not "upgrades" to the near-term tier — they're different strategies with different tradeoffs (cash vs. financing, older classic vs. newer production, monohull vs. catamaran).</li>
+  <li><strong>Catamaran vs. monohull:</strong> Both still on the table at every tier. Monohull shortlists favor heavy-displacement bluewater classics; catamaran shortlists favor narrow-beam designs that fit standard slips.</li>
+  <li><strong>Tartan 33 (specific boat) passed on, make/model still viable.</strong> The evaluated boat needed more money to get safely sailing than a better boat at similar all-in cost. A Tartan 33 with lower total-to-slip cost would still be considered. This is a single-boat decision, not a category dismissal.</li>
+  <li><strong>Prout Snowgoose 37/Elite under active evaluation.</strong> Survey would be required before any purchase — structural build quality is the main open concern.</li>
+  <li><strong>Insurance first, then purchase.</strong> Qualification path must be mapped before committing to a vessel, especially for offshore-capable boats.</li>
+  <li><strong>20-year hull-age rule is a hard financing cutoff.</strong> Marine loans generally don't cover hulls older than 20 years, which is what splits the near-term tier (cash only) from the mid-term tier (financing possible).</li>
+</ul>
+
+<h3>Open questions</h3>
+<ul>
+  <li>Can BoatUS Safe Boating Certificate count toward insurance qualification, or is it baseline-only?</li>
+  <li>Is ASA 104 or OUPV the more practical path given the timeline to purchase?</li>
+  <li>What are the specific liveaboard loan requirements vs. standard marine financing?</li>
+  <li>Prout Snowgoose: is the build quality concern addressable with a good survey, or is it a structural issue with the line?</li>
+  <li>What all-in budget numbers should go in each tier? (Depends on savings trajectory and sequencing of other financial events.)</li>
+</ul>
+
+<h2>§4 — File inventory</h2>
+<table>
+  <thead><tr><th>File</th><th>Format</th><th>Where</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Bluewater monohull shortlist comparison</td><td>Notes (informal)</td><td>Google Drive / Sailboat folder</td><td>Current — 7 boats, ranked by seaworthiness</td></tr>
+    <tr><td>Prout Snowgoose 37 research notes</td><td>.md</td><td>Google Drive</td><td>Draft — produced this session, needs review</td></tr>
+    <tr><td>Insurance qualification research</td><td>.md</td><td>Google Drive</td><td>Started this session — incomplete</td></tr>
+    <tr><td>BoatUS Safe Boating Certificate</td><td>Online course</td><td>BoatUS website</td><td>In progress</td></tr>
+    <tr><td>Tiered financial plan (this file, §3)</td><td>.html</td><td>This handoff</td><td>Tiers defined, dollar figures TBD</td></tr>
+    <tr><td>Ongoing research tracks (this file, §3)</td><td>.html</td><td>This handoff</td><td>Two tracks open: Prout forever-boat question; electric/renewable maturity</td></tr>
+  </tbody>
+</table>
+
+<h2>§5 — Watch items &amp; constraints</h2>
+<div class="watch">
+  <ul>
+    <li><strong>Don't buy before mapping the insurance qualification path.</strong> A vessel that can't be insured for offshore liveaboard use at a reasonable premium is not a viable purchase, regardless of price or condition.</li>
+    <li><strong>Evaluate total-to-slip cost, not sticker price.</strong> The Tartan 33 lesson: a low purchase price means nothing if the pre-sail repairs push the all-in past what a better boat would cost. Always compute all-in before comparing options across tiers.</li>
+    <li><strong>Survey is non-negotiable</strong> for any purchase, especially older fiberglass and any boat with osmotic blister history.</li>
+    <li><strong>Marina slip terms:</strong> Confirm whether the secured slip has an LOA or beam limit before committing to a wide-beam catamaran. Catamarans often need wider slips, and mid-tier Lagoons will not fit standard monohull slips.</li>
+    <li><strong>20-year hull-age rule</strong> is a hard line for most marine loans — it determines which tier a boat falls into regardless of its purchase price.</li>
+    <li><strong>Gemini 105MC known issue:</strong> Centerboard design has been criticised for offshore use. Good Chesapeake Bay boat (shallow-water anchorages, protected cruising), not a true bluewater platform — place it in the mid-term tier accordingly, and don't let a good local-cruising experience mask the offshore limits.</li>
+    <li><strong>Lagoon 380 beam warning:</strong> ~22ft beam means double slip fees at most marinas. Verify slip compatibility before putting on any active shortlist.</li>
+  </ul>
+</div>
+
+<h2>§6 — Project operating core</h2>
+<div class="operating">
+
+  <h3>Project description</h3>
+  <p>Transition from shoreside living to full-time liveaboard on a bluewater-capable sailboat, with a long-term goal of offshore cruising. Near-term: find and purchase a suitable vessel sized to the near-term budget tier, get properly qualified, and move aboard at the secured marina slip. The near and mid-term cruising grounds are the Chesapeake Bay and adjacent coastal waters — shallow, shoaly, and known for short steep summer chop — which favors either shoal-draft hulls (keel-centerboards, twin keels, catamarans with boards up) or heavier-displacement monohulls that ride chop well. Mid and long-term: progress through the boat tiers as savings and credentials allow, toward an eventual offshore-ready platform.</p>
+
+  <h3>Methodology</h3>
+  <p>Decisions are made in qualification order: safety and insurability first, then seaworthiness, then comfort, then cost. No boat is evaluated as a purchase candidate until the insurance qualification pathway is mapped. Boats are matched to financial tiers by <em>all-in cost</em> (purchase + survey contingency + delivery + immediate must-fix items), not by sticker price. Research is primary-source where possible (owner forums, class associations, surveyor reports) rather than aggregator sites.</p>
+
+  <h3>Key terminology</h3>
+  <ul>
+    <li><strong>Bluewater capable:</strong> Suitable for offshore passages in open ocean conditions, not just coastal cruising. Minimum standard for the long-term tier; optional for near and mid-term tiers where a coastal-focused boat can make sense as a stepping stone.</li>
+    <li><strong>Liveaboard:</strong> Living aboard full-time, not just weekend use. Insurance and marina requirements differ significantly from part-time use.</li>
+    <li><strong>All-in cost:</strong> Purchase price + survey + delivery + any immediate pre-sail must-fix items. The number that actually determines which tier a boat falls into.</li>
+    <li><strong>Near-term tier:</strong> Cash-only, pre-2006 hulls, expect deferred maintenance. See §3 shortlist.</li>
+    <li><strong>Mid-term tier:</strong> Cash quality or financing-eligible hulls. Catamarans first become realistic here. See §3 shortlist.</li>
+    <li><strong>Long-term tier:</strong> Financing-eligible newer production or premium classics. Later-career acquisition. See §3 shortlist.</li>
+  </ul>
+
+  <h3>Decision rules</h3>
+  <ul>
+    <li>If a boat can't be insured for offshore liveaboard use, it's off the list regardless of other merits.</li>
+    <li>If a boat's all-in cost (purchase + survey + delivery + pre-sail must-fixes) exceeds the ceiling of a higher tier, re-evaluate against that higher tier's shortlist instead.</li>
+    <li>When evaluating a new boat candidate, always check: age, builder reputation, known class issues, osmotic blister history, rig condition, engine hours.</li>
+    <li>Budget estimates should include 10–15% contingency for survey findings.</li>
+    <li>A boat failing one tier's economics doesn't eliminate its make/model — the same model at a different all-in number may still fit.</li>
+    <li>For the near and mid-term tiers, weight boat selection toward the Chesapeake Bay cruising profile: shoal draft (under 5 ft preferred, under 3 ft ideal) and either heavy displacement or multihull stability to handle the Bay's short steep chop. A boat that can't comfortably use the Bay's shallow anchorages loses most of the near/mid-term value of the location.</li>
+  </ul>
+
+  <h3>Quality bar</h3>
+  <p>Research outputs should be specific enough to act on — not "insurance is complicated" but "Markel requires ASA 104 or equivalent for offshore coverage on vessels over 30ft." Vague summaries are not useful here. Boat recommendations must be tied to a specific tier and include the reasoning for that placement.</p>
+
+  <h3>Hard rules</h3>
+  <ul>
+    <li>Never recommend a boat that hasn't been checked against known class issues and insurance requirements.</li>
+    <li>Never compare boats on sticker price alone — use all-in cost.</li>
+    <li>Never dismiss a make/model based on a single bad example. Record the specific boat's issues, not a category rejection.</li>
+  </ul>
+
+  <h3>Naming convention</h3>
+  <pre>Research notes:   sailboat-[topic]-notes-YYYY-MM-DD.md
+Comparisons:      sailboat-[comparison-topic]-YYYY-MM-DD.md
+Handoffs:         sailboat-handoff-YYYY-MM-DD.html</pre>
+
+</div>
+
+<h2>§7 — Resume instructions for Claude</h2>
+<div class="resume">
+  <ol>
+    <li>Read this full handoff before responding.</li>
+    <li>The project decision framework is in §6: insurability first, then seaworthiness, then comfort, then cost. Apply this ordering to all recommendations.</li>
+    <li>All boat recommendations must be tied to one of the three tiers in §3 and justified by all-in cost, not sticker price.</li>
+    <li>Top priority is §2: map the complete qualification pathway. Start there.</li>
+    <li>Tartan 33 was passed on as a specific boat, not as a make/model. Don't treat the category as ruled out.</li>
+    <li>Prout Snowgoose 37 is under active evaluation in the mid-term tier — build quality concern is the main open question. It is also the subject of an ongoing research track (§3 Track 1) asking whether it belongs in the long-term tier as a forever boat. Keep both frames in mind.</li>
+    <li>The electric-propulsion / renewable-generation readiness track (§3 Track 2) is a standing evaluation, not a decision point. Don't prematurely recommend an all-electric platform; don't dismiss the category either. Update against the readiness criteria when new information surfaces.</li>
+  </ol>
+</div>
+
+<h2>§8 — Notes from this session</h2>
+<div class="info">
+  <ul>
+    <li>Established rule: map insurance qualification path before committing to any specific vessel.</li>
+    <li>Established rule: compare boats on all-in cost, not sticker price. Drove the restructure of §3 into three tiers.</li>
+    <li>Established rule: single-boat rejections don't eliminate a make/model. The Tartan 33 lesson is about that specific boat's economics, not the design.</li>
+    <li>Confirmed: BoatUS Safe Boating Certificate is a baseline credential, not a primary qualification for offshore insurance.</li>
+    <li>New research area opened: liveaboard-specific loan products vs. standard marine financing — different collateral and qualification requirements. The 20-year hull-age cutoff is what structurally separates the near-term tier from the mid-term tier.</li>
+    <li>Formalised the concept of <strong>ongoing research tracks</strong> in §3 — open investigations that persist across sessions rather than being closed out. Two tracks opened: the Prout forever-boat question, and electric-propulsion / renewable-generation readiness.</li>
+    <li>Long-term tier expanded beyond the Leopard 44 to include Fountaine Pajot, larger Lagoons, Bali, and Nautitech — newer production cats where factory electric-propulsion options are starting to appear, which ties directly into Track 2.</li>
+  </ul>
+</div>
+
+<p class="meta" style="margin-top:3em; border-top:1px solid #ccc; padding-top:1em;">
+  End of handoff — Session 7, 2026-04-21. &nbsp;
+  <strong>Next session priority: Map complete qualification pathway from current state to insurable offshore liveaboard.</strong>
+</p>
+
+<hr style="margin-top:4em;border-color:#ddd;">
+<p style="font-size:0.8em;color:#888;margin-top:1em;">
+  <strong>Claude Session Handoff Template</strong> — example file. See <code>template.html</code> for the blank version.
+  Template source: <a href="https://github.com/[your-username]/claude-session-handoff" style="color:#3a6080;">github.com/[your-username]/claude-session-handoff</a>
+</p>
+
+</body>
+</html>
